@@ -1,31 +1,7 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import renderer from 'react-test-renderer'
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import { Provider } from 'react-redux'
-import { connectRoutes } from 'redux-first-router'
-import createHistory from 'history/createMemoryHistory'
 import { ScrollContainer } from '../src'
-
-const createApp = () => {
-  const history = createHistory()
-  const { reducer: location, middleware, enhancer } = connectRoutes(history, {
-    HOME: '/',
-    FIRST: '/first',
-    SECOND: '/second'
-  })
-
-  const middlewares = applyMiddleware(middleware)
-  const reducer = combineReducers({ location })
-  const store = createStore(reducer, compose(enhancer, middlewares))
-
-  const app = (
-    <Provider store={store}>
-      <ScrollContainer />
-    </Provider>
-  )
-  return { app, store }
-}
 
 const createScroll = props => <ScrollContainer {...props} />
 

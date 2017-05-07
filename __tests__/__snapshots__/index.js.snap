@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`asdf 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`asdf 2`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`bar 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`bar 2`] = `
+<RCTScrollView
+  backNext={true}
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`foo 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    test69
+  </Text>
+</View>
+`;
+
+exports[`foo 2`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    test69
+  </Text>
+</View>
+`;
+
+exports[`s 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves  1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll  1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll pos 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll posi 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll posit 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position  1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position on 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMome 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores  1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on com 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on component 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on componentD 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on componentDid 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on componentDidMou 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on componentDidMount 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on mount 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onMomentumScrollEnd and restores on mount 2`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onScrollEndDrag and restores on 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onScrollEndDrag and restores on componentDid 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onScrollEndDrag and restores on componentDidUpdate 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onScrollEndDrag and restores on mount 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onScrollEndDrag and restores onC 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`saves scroll position onScrollEndDrag and restores onComponent 1`] = `
+<RCTScrollView
+  component={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScrollEndDrag={[Function]}
+  scrollKey="foo"
+>
+  <View />
+</RCTScrollView>
+`;

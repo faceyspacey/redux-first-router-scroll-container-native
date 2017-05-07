@@ -67,11 +67,6 @@
     "travis-github-status": "^1.4.1",
     "semantic-release": "^6.3.6"
   },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*",
-    "redux-first-router": "*"
-  },
   "jest": {
     "preset": "react-native"
   }

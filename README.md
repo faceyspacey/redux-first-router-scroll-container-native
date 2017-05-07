@@ -47,8 +47,8 @@ import { FlatList, TouchableOpacity } from 'react-native'
 import { back } from 'redux-first-router'
 import ScrollContainer from 'redux-first-router-scroll-container-native'
 
-export default ({ type, dispatch }) =>
-  type === 'SCENE1'
+export default ({ scene, dispatch }) =>
+  scene === 'SCENE1'
     ? <ScrollContainer
         component={FlatList}// FlatList, ScrollView, SectionList, ListView, etc
         scrollKey='scene-1' // used to differentiate between multiple scrollViews
@@ -73,11 +73,12 @@ export default connect(mapState)(MyComponent)
 
 ## Pros
 - no HOCs are needed
+- both y and x values can be restored
 - no `<Provider />` components are needed (it's redux-powered)
 - scroll position recorded in both `onMomentumScrollEnd` and `onScrollEndDrag`
 - even if you don't use the `back`/`next` methods from `redux-first-router`, and you navigate to a route you were just at, it will be determined you are revisiting a page worth of a nifty scroll restoration. Hurray!
 - increment `forceRestore` or call `ref.restoreScroll()` after asynchronous events update the page with more data and a longer/wider page. Won't be needed if you are using things like `redux-persist`--that way when you return to the page you already have the data you needed and it renders in its full dimensions on mount :)
-- will handle the case where you render a `ScrollContainer` in the exact same place within the component tree and React re-uses it and doesn't remount it. In that case, instead of `componentDidMount` handling scroll restoration, `componentDidUpdate` handles scroll restoration. Long live React! *If you want to force mounting a new component, simply give it a unique `key` prop.
+- will handle the case where you render a `ScrollContainer` in the exact same place within the component tree and React re-uses it and doesn't remount it. In that case, instead of `componentDidMount` handling scroll restoration, `componentDidUpdate` handles scroll restoration. Long live React! *If you want to force mounting a new component, simply give it a unique `key` prop.*
 
 
 ## Contributing

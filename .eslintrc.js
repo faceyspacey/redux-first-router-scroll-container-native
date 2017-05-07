@@ -108,14 +108,16 @@ module.exports = {
       2,
       {
         order: [
+          'contextTypes',
           'propTypes',
           'props',
-          'state',
           'defaultProps',
+          'state',
+          'static-methods',
           'contextTypes',
           'childContextTypes',
           'getChildContext',
-          'static-methods',
+          'constructor',
           'lifecycle',
           'everything-else',
           'render'

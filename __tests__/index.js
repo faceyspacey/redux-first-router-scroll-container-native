@@ -3,7 +3,11 @@ import { View } from 'react-native'
 import renderer from 'react-test-renderer'
 import { ScrollContainer } from '../src'
 
-const createScroll = props => <ScrollContainer {...props} />
+const createScroll = props => (
+  <ScrollContainer {...props}>
+    <View {...props} />
+  </ScrollContainer>
+)
 
 test('saves scroll position onMomentumScrollEnd and restores on componentDidMount', () => {
   let ref

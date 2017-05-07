@@ -1,12 +1,34 @@
 // @flow
+// $FlowFixMe
+import { ScrollView } from 'react-native'
 import React from 'react'
 import { connect } from 'react-redux'
-import { ScrollView } from 'react-native'
+import type { Connector } from 'react-redux'
 
-type Props = {
+type OwnProps = {
   scrollKey: string,
-  component?: string,
-  forceRestore?: boolean
+  component: Object,
+  forceRestore?: boolean,
+  onScrollEndDrag?: Function,
+  onMomentumScrollEnd?: Function
+}
+
+type StateProps = {
+  backNext: ?boolean
+}
+
+type Props = OwnProps & StateProps
+
+type XY = {
+  x: number,
+  y: number,
+  animated: boolean
+}
+
+type Event = {
+  nativeEvent: {
+    contentOffset: { x: number, y: number }
+  }
 }
 
 export class ScrollContainer extends React.Component {
@@ -25,7 +47,7 @@ export class ScrollContainer extends React.Component {
   // `componentDidUpdate` msut also be used in addition to `componentDidMount`
   // since if the `ScrollView` is rendered in the exact same place, the same
   // component instance will be re-used and won't re-mount
-  componentDidUpdate({ scrollKey, forceRestore }) {
+  componentDidUpdate({ scrollKey, forceRestore }: Props) {
     if (
       scrollKey !== this.props.scrollKey ||
       (this.props.forceRestore && forceRestore !== this.props.forceRestore)
@@ -33,6 +55,8 @@ export class ScrollContainer extends React.Component {
       this.restoreScroll()
     }
   }
+
+  scrollView: Object
 
   restoreScroll() {
     if (this.props.backNext) {
@@ -49,7 +73,7 @@ export class ScrollContainer extends React.Component {
       this.reset()
     }
   }
-  scrollTo(xy) {
+  scrollTo(xy: XY) {
     const scrollTo =
       this.scrollView.scrollTo ||
       (this.scrollView._listRef &&
@@ -64,10 +88,10 @@ export class ScrollContainer extends React.Component {
             this is a mistake.`)
   }
 
-  getLastXY({ backNext }) {
-    return backNext && ScrollContainer.scrollViews[this.props.scrollKey]
+  getLastXY(): XY {
+    return ScrollContainer.scrollViews[this.props.scrollKey]
   }
-  setLastXY(e) {
+  setLastXY(e: Event) {
     const { x, y } = e.nativeEvent.contentOffset
     const key = this.props.scrollKey
 
@@ -77,14 +101,14 @@ export class ScrollContainer extends React.Component {
     delete ScrollContainer.scrollViews[this.props.scrollKey]
   }
 
-  onScrollEndDrag = e => {
+  onScrollEndDrag = (e: Event) => {
     this.setLastXY(e)
     if (this.props.onScrollEndDrag) {
       this.props.onScrollEndDrag(e)
     }
   }
 
-  onMomentumScrollEnd = e => {
+  onMomentumScrollEnd = (e: Event) => {
     this.setLastXY(e)
     if (this.props.onMomentumScrollEnd) {
       this.props.onMomentumScrollEnd(e)
@@ -92,11 +116,17 @@ export class ScrollContainer extends React.Component {
   }
 
   render() {
-    const ScrollComponent = this.props.component
+    const {
+      scrollKey,
+      backNext,
+      forceRestore,
+      component: ScrollComponent,
+      ...props
+    } = this.props
 
     return (
       <ScrollComponent
-        {...this.props}
+        {...props}
         ref={node => (this.scrollView = node)}
         key={this.props.scrollKey}
         onScrollEndDrag={this.onScrollEndDrag}
@@ -110,4 +140,6 @@ const mapStateToProps = ({ location }) => ({
   backNext: location.backNext
 })
 
-export default connect(mapStateToProps)(ScrollContainer)
+const connector: Connector<OwnProps, Props> = connect(mapStateToProps)
+
+export default connector(ScrollContainer)

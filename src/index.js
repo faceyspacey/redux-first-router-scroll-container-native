@@ -85,7 +85,7 @@ export class ScrollContainer extends React.Component {
       (this.scrollView._scrollRef && this.scrollView._scrollRef.scrollTo)
 
     scrollTo
-      ? scrollTo(xy)
+      ? setTimeout(() => scrollTo(xy))
       : console.warn(`[redux-first-router-scroll-container-native] the component
             you passed does not have a 'scrollTo' method. 'FlatList', 'SectionList',
             and 'ScrollView' have been tested. Please submit an issue if you think

@@ -10,6 +10,8 @@ const createScroll = props => (
   </ScrollContainer>
 )
 
+global.setTimeout = cb => cb()
+
 test('saves scroll position onMomentumScrollEnd and restores on componentDidMount', () => {
   let ref
   let component

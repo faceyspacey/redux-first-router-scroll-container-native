@@ -1,3 +1,4 @@
+// @noflow
 import React from 'react'
 import { View } from 'react-native'
 import renderer from 'react-test-renderer'
@@ -35,6 +36,7 @@ test('saves scroll position onMomentumScrollEnd and restores on componentDidMoun
     scrollKey: 'foo',
     backNext: true
   })
+
   instance = renderer.create(component)
 
   ref.scrollTo = jest.fn()
@@ -121,8 +123,10 @@ test('resets scroll position on mount/update if !props.backNext', () => {
   // at the same place in the component tree, but it in fact is representing
   // another scene
   ref.reset = jest.fn()
+  ref.scrollTo = jest.fn()
   ref.componentDidUpdate({ scrollKey: 'bar' })
   expect(ref.reset).toHaveBeenCalled()
+  expect(ref.scrollTo).not.toHaveBeenCalled()
   expect(ScrollContainer.scrollViews).toEqual({})
 })
 

@@ -1,5 +1,6 @@
 // @flow
-// $FlowFixMe
+
+// $FlowFixMe - react-native is ignored, which produces an error
 import { ScrollView } from 'react-native'
 import React from 'react'
 import { connect } from 'react-redux'

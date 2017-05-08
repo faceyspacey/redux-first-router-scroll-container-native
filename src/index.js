@@ -3,15 +3,18 @@
 // $FlowFixMe - react-native is ignored, which produces an error
 import { ScrollView } from 'react-native'
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import type { Connector } from 'react-redux'
 
+type GenericComponent = Class<React.Component<*, *, *>>
+
 type OwnProps = {
   scrollKey: string,
-  component: Object,
+  component: GenericComponent,
   forceRestore?: boolean,
-  onScrollEndDrag?: Function,
-  onMomentumScrollEnd?: Function
+  onScrollEndDrag?: Event => void,
+  onMomentumScrollEnd?: Event => void
 }
 
 type StateProps = {
@@ -143,4 +146,14 @@ const mapStateToProps = ({ location }) => ({
 
 const connector: Connector<OwnProps, Props> = connect(mapStateToProps)
 
-export default connector(ScrollContainer)
+const Container = connector(ScrollContainer)
+
+Container.propTypes = {
+  scrollKey: PropTypes.string.isRequired,
+  component: PropTypes.object, // not required unlike Flow which requires it if you have its defaultProp
+  forceRestore: PropTypes.bool,
+  onScrollEndDrag: PropTypes.func,
+  onMomentumScrollEnd: PropTypes.func
+}
+
+export default Container

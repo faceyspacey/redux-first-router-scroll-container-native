@@ -2,7 +2,7 @@
   "name": "redux-first-router-scroll-container-native",
   "version": "0.0.0-development",
   "description": "scroll restoration for React Native using Redux First Router",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/faceyspacey/redux-first-router-scroll-container-native.git"
@@ -25,8 +25,7 @@
     "precommit": "lint-staged --verbose && npm test",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "prepublish": "echo BUILT! for now nothing is transpiled, but perhaps flow types need to be removed for some users",
-    "prepublish-disabled": "npm run clean && npm run build && npm run flow-copy"
+    "prepublish": "npm run clean && npm run build && npm run flow-copy"
   },
   "config": {
     "commitizen": {
@@ -41,8 +40,10 @@
     ]
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "19.0.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-react-native": "1.9.1",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
@@ -53,6 +54,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "flow-bin": "^0.45.0",
+    "flow-copy-source": "^1.1.0",
     "history": "^4.6.1",
     "husky": "^0.13.3",
     "jest": "19.0.2",
@@ -64,10 +66,14 @@
     "react-test-renderer": "16.0.0-alpha.6",
     "redux": "^3.6.0",
     "redux-first-router": "^1.1.2",
-    "travis-github-status": "^1.4.1",
-    "semantic-release": "^6.3.6"
+    "rimraf": "^2.6.1",
+    "semantic-release": "^6.3.6",
+    "travis-github-status": "^1.4.1"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8"
   }
 }

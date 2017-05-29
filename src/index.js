@@ -141,7 +141,7 @@ export class ScrollContainer extends React.Component {
 }
 
 const mapStateToProps = ({ location }) => ({
-  backNext: location.backNext
+  backNext: /back|next|pop/.test(location.kind)
 })
 
 const connector: Connector<OwnProps, Props> = connect(mapStateToProps)
